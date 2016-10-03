@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'my-app',
-    template: '<h1>Pet Mais - Passeios para cães</h1>'
+    templateUrl: 'app/views/home.html'
 })
 export class AppComponent { }
