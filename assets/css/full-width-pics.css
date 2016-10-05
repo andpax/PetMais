@@ -6,7 +6,9 @@
 
 body {
     margin-top: 50px; /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    background:#F0FDF2;
 }
+
 
 .image-bg-fluid-height,
 .image-bg-fixed-height {
@@ -50,6 +52,7 @@ section {
 
 footer {
     margin: 50px 0;
+    background:#D1EBDE;
 }
 
 @media(max-width:768px) {
@@ -61,4 +64,16 @@ footer {
     .section-heading {
         font-size: 2em;
     }
+}
+
+.ajust{
+
+
+    width:33%;
+    float: left;
+
+}
+
+#centro {
+    width:33%;
 }
