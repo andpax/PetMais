@@ -5,6 +5,7 @@ import { homeRoutes } from './home/home.routes';
 import { cadastroRoutes } from './cadastro/cadastro.routes';
 import { proprietarioRoutes } from './proprietario/proprietario.routes';
 import { passeadorRoutes } from './passeador/passeador.routes';
+import { petRoutes } from './pet/pet.routes';
 
 export const routes: Routes = [
     {
@@ -15,7 +16,8 @@ export const routes: Routes = [
     ...homeRoutes,
     ...cadastroRoutes,
     ...proprietarioRoutes,
-    ...passeadorRoutes
+    ...passeadorRoutes,
+    ...petRoutes
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes);

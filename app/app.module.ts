@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ProprietarioComponent } from './proprietario/proprietario.component';
 import { PasseadorComponent } from './passeador/passeador.component';
+import { PetComponent } from './pet/pet.component';
 import { routing } from './app.routes';
 
 @NgModule({
@@ -26,7 +27,8 @@ import { routing } from './app.routes';
         HomeComponent,
         CadastroComponent,
         ProprietarioComponent,
-        PasseadorComponent
+        PasseadorComponent,
+        PetComponent
     ],
     bootstrap: [ AppComponent ]
 })

@@ -20,6 +20,7 @@ var home_component_1 = require('./home/home.component');
 var cadastro_component_1 = require('./cadastro/cadastro.component');
 var proprietario_component_1 = require('./proprietario/proprietario.component');
 var passeador_component_1 = require('./passeador/passeador.component');
+var pet_component_1 = require('./pet/pet.component');
 var app_routes_1 = require('./app.routes');
 var AppModule = (function () {
     function AppModule() {
@@ -38,7 +39,8 @@ var AppModule = (function () {
                 home_component_1.HomeComponent,
                 cadastro_component_1.CadastroComponent,
                 proprietario_component_1.ProprietarioComponent,
-                passeador_component_1.PasseadorComponent
+                passeador_component_1.PasseadorComponent,
+                pet_component_1.PetComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 
