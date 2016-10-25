@@ -9,14 +9,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require("@angular/router");
+var passeador_model_1 = require('./passeador.model');
+var passeador_service_1 = require('./passeador.service');
 var PasseadorComponent = (function () {
-    function PasseadorComponent() {
+    function PasseadorComponent(router, passeadorService) {
+        this.router = router;
+        this.passeadorService = passeadorService;
     }
+    PasseadorComponent.prototype.ngOnInit = function () {
+        this.passeador = new passeador_model_1.PasseadorModel();
+    };
+    PasseadorComponent.prototype.cadastrar = function () {
+        this.passeadorService.cadastrar(this.passeador);
+        //this.router.navigate(['/listar-passeador']);
+    };
     PasseadorComponent = __decorate([
         core_1.Component({
-            templateUrl: 'app/views/form-passeador.html'
+            templateUrl: 'app/views/form-passeador.html',
+            providers: [passeador_service_1.PasseadorService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router, passeador_service_1.PasseadorService])
     ], PasseadorComponent);
     return PasseadorComponent;
 }());

@@ -1,1 +1,1 @@
-{"version":3,"file":"passeador.routes.js","sourceRoot":"","sources":["passeador.routes.ts"],"names":[],"mappings":";AAEA,oCAAmC,uBAAuB,CAAC,CAAA;AAE9C,uBAAe,GAAW;IACnC,EAAE,IAAI,EAAE,WAAW,EAAE,SAAS,EAAE,wCAAkB,EAAC;CACtD,CAAC"}
+{"version":3,"file":"passeador.routes.js","sourceRoot":"","sources":["passeador.routes.ts"],"names":[],"mappings":";AAEA,oCAAmC,uBAAuB,CAAC,CAAA;AAC3D,2CAAuC,8BAA8B,CAAC,CAAA;AAEzD,uBAAe,GAAW;IACnC,EAAE,IAAI,EAAE,WAAW,EAAE,SAAS,EAAE,wCAAkB,EAAC;IACnD,EAAE,IAAI,EAAE,kBAAkB,EAAE,SAAS,EAAE,qDAAwB,EAAC;CACnE,CAAC"}

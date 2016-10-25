@@ -1,0 +1,18 @@
+<div id="main" class="container-fluid">
+    <h3 class="page-header">Lista de Profissinais - Passeadores</h3>
+    <div class="container">
+        <div class="media" *ngFor="let passeador of passeadores">
+            <div class="media-left">
+                <img src="assets/img/img_avatar1.png" alt="passeador" class="midia-object" style="width: 70px;">
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">{{ passeador.nome }}</h4>
+                <span>Telefone: {{ passeador.telefone }}</span>
+                <br>
+                <span>Email: {{ passeador.email }}</span>
+                <br>
+                <span>Preço por passeio: R$ {{ passeador.preco }}</span>
+            </div>
+        </div>
+    </div>
+</div>

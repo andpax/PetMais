@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ProprietarioComponent } from './proprietario/proprietario.component';
 import { PasseadorComponent } from './passeador/passeador.component';
+import { ListarPasseadorComponent } from './passeador/listar-passeador.component';
 import { PetComponent } from './pet/pet.component';
 import { routing } from './app.routes';
 
@@ -28,6 +29,7 @@ import { routing } from './app.routes';
         CadastroComponent,
         ProprietarioComponent,
         PasseadorComponent,
+        ListarPasseadorComponent,
         PetComponent
     ],
     bootstrap: [ AppComponent ]

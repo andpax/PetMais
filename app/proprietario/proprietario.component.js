@@ -9,14 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var proprietario_model_1 = require('./proprietario.model');
+var proprietario_service_1 = require('./proprietario.service');
 var ProprietarioComponent = (function () {
-    function ProprietarioComponent() {
+    function ProprietarioComponent(proprietarioService) {
+        this.proprietarioService = proprietarioService;
     }
+    ProprietarioComponent.prototype.ngOnInit = function () {
+        this.proprietario = new proprietario_model_1.ProprietarioModel();
+    };
+    ProprietarioComponent.prototype.cadastrar = function () {
+        this.proprietarioService.cadastrar(this.proprietario);
+    };
     ProprietarioComponent = __decorate([
         core_1.Component({
-            templateUrl: 'app/views/form-proprietario.html'
+            templateUrl: 'app/views/form-proprietario.html',
+            providers: [proprietario_service_1.ProprietarioService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [proprietario_service_1.ProprietarioService])
     ], ProprietarioComponent);
     return ProprietarioComponent;
 }());
