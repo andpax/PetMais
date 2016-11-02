@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 
-import { CadastroComponent} from './cadastro.component';
+import { OpcoesCadastroComponent } from './opcoes-cadastro.component';
 
 export const cadastroRoutes : Routes = [
-    { path: 'cadastro', component: CadastroComponent }
+    { path: 'cadastro', component: OpcoesCadastroComponent }
 ];

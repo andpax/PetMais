@@ -56,11 +56,11 @@ import { Component } from '@angular/core';
             </div>
             <div class="span6">
                 <div class="social pull-right">
-                    <a href="#" target="blank_"><img src="http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/48/Other-Mail-Metro-icon.png" alt=""></a> <!-- Criar página de formulário de contato -->
-                    <a href="https://www.linkedin.com/" target="blank_"><img src="http://icons.iconarchive.com/icons/danleech/simple/48/linkedin-icon.png" alt=""></a>
-                    <a href="https://www.facebook.com/" target="blank_"><img src="http://icons.iconarchive.com/icons/sicons/flat-shadow-social/48/facebook-icon.png" alt=""></a>
-                    <a href="https://twitter.com/" target="blank_"><img src="http://icons.iconarchive.com/icons/danleech/simple/48/twitter-icon.png" alt=""></a>
-                    <a href="https://www.youtube.com/" target="blank_"><img src="http://icons.iconarchive.com/icons/danleech/simple/48/youtube-icon.png" alt=""></a>
+                    <a href="#" target="blank_"><img src="assets/img/Other-Mail-Metro-icon.png" alt=""></a> <!-- Criar página de formulário de contato -->
+                    <a href="https://www.linkedin.com/" target="blank_"><img src="assets/img/linkedin-icon.png" alt=""></a>
+                    <a href="https://www.facebook.com/" target="blank_"><img src="assets/img/facebook-icon.png" alt=""></a>
+                    <a href="https://twitter.com/" target="blank_"><img src="assets/img/twitter-icon.png" alt=""></a>
+                    <a href="https://www.youtube.com/" target="blank_"><img src="assets/img/youtube-icon.png" alt=""></a>
                 </div>
             </div>
         </div>

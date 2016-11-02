@@ -1,7 +1,10 @@
 import { Routes } from '@angular/router';
 
-import { ProprietarioComponent } from './proprietario.component';
+import { PerfilProprietarioComponent } from '../proprietario/perfil-proprietario.component';
+import { CadastroProprietarioComponent } from '../proprietario/cadastro-proprietario.component';
+
 
 export const proprietarioRoutes: Routes = [
-    { path: 'proprietario', component: ProprietarioComponent }
+    { path: 'perfil-proprietario', component: PerfilProprietarioComponent },
+    { path: 'cadastro-proprietario', component: CadastroProprietarioComponent }
 ];

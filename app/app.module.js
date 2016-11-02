@@ -17,9 +17,12 @@ var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
 var app_component_1 = require('./app.component');
 var home_component_1 = require('./home/home.component');
-var cadastro_component_1 = require('./cadastro/cadastro.component');
-var proprietario_component_1 = require('./proprietario/proprietario.component');
-var passeador_component_1 = require('./passeador/passeador.component');
+var opcoes_cadastro_component_1 = require('./cadastro/opcoes-cadastro.component');
+var agendamento_component_1 = require('./agendamento/agendamento.component');
+var perfil_proprietario_component_1 = require('./proprietario/perfil-proprietario.component');
+var cadastro_proprietario_component_1 = require('./proprietario/cadastro-proprietario.component');
+var perfil_passeador_component_1 = require('./passeador/perfil-passeador.component');
+var cadastro_passeador_component_1 = require('./passeador/cadastro-passeador.component');
 var listar_passeador_component_1 = require('./passeador/listar-passeador.component');
 var pet_component_1 = require('./pet/pet.component');
 var app_routes_1 = require('./app.routes');
@@ -38,9 +41,12 @@ var AppModule = (function () {
             declarations: [
                 app_component_1.AppComponent,
                 home_component_1.HomeComponent,
-                cadastro_component_1.CadastroComponent,
-                proprietario_component_1.ProprietarioComponent,
-                passeador_component_1.PasseadorComponent,
+                opcoes_cadastro_component_1.OpcoesCadastroComponent,
+                agendamento_component_1.AgendamentoComponent,
+                perfil_proprietario_component_1.PerfilProprietarioComponent,
+                cadastro_proprietario_component_1.CadastroProprietarioComponent,
+                perfil_passeador_component_1.PerfilPasseadorComponent,
+                cadastro_passeador_component_1.CadastroPasseadorComponent,
                 listar_passeador_component_1.ListarPasseadorComponent,
                 pet_component_1.PetComponent
             ],

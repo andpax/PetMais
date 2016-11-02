@@ -6,10 +6,10 @@ import { PasseadorService } from './passeador.service';
 
 
 @Component({
-    templateUrl: 'app/views/form-passeador.html',
+    templateUrl: 'app/passeador/templates/cadastro-passeador.html',
     providers: [ PasseadorService ]
 })
-export class PasseadorComponent implements OnInit {
+export class CadastroPasseadorComponent implements OnInit {
 
     private passeador: PasseadorModel;
 
@@ -24,6 +24,6 @@ export class PasseadorComponent implements OnInit {
 
     cadastrar() {
         this.passeadorService.cadastrar(this.passeador);
-        //this.router.navigate(['/listar-passeador']);
+        this.router.navigate(['/listar-passeador']);
     }
 }

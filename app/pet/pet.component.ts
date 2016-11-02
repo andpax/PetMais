@@ -4,7 +4,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: 'app/views/form-pet.html'
+    templateUrl: 'app/pet/templates/cadastro-pet.html'
 })
 export class PetComponent {
 

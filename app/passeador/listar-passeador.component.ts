@@ -8,19 +8,19 @@ import { PasseadorService } from './passeador.service';
 
 
 @Component({
-    templateUrl: 'app/views/listar-passeador.html',
+    templateUrl: 'app/passeador/templates/listar-passeador.html',
     providers: [ PasseadorService ]
 })
 export class ListarPasseadorComponent implements OnInit {
 
-    private passeadores: PasseadorModel[];
+    private walker: PasseadorModel[];
 
     constructor(
         private passeadorService: PasseadorService
     ){}
 
     ngOnInit() {
-        this.passeadores = this.passeadorService.listarTodos();
+        this.walker = this.passeadorService.listarTodos();
     }
 
 }

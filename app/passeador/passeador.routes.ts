@@ -1,9 +1,11 @@
 import { Routes } from '@angular/router';
 
-import { PasseadorComponent } from './passeador.component';
-import {ListarPasseadorComponent} from "./listar-passeador.component";
+import { PerfilPasseadorComponent } from './perfil-passeador.component';
+import { CadastroPasseadorComponent } from './cadastro-passeador.component';
+import { ListarPasseadorComponent } from "./listar-passeador.component";
 
 export const passeadorRoutes: Routes = [
-    { path: 'passeador', component: PasseadorComponent},
-    { path: 'listar-passeador', component: ListarPasseadorComponent}
+    { path: 'perfil-passeador', component: PerfilPasseadorComponent },
+    { path: 'cadastro-passeador', component: CadastroPasseadorComponent },
+    { path: 'listar-passeador', component: ListarPasseadorComponent }
 ];

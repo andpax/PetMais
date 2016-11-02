@@ -8,11 +8,18 @@ import { HttpModule, JsonpModule } from '@angular/http';
 
 import { AppComponent }   from './app.component';
 import { HomeComponent } from './home/home.component';
-import { CadastroComponent } from './cadastro/cadastro.component';
-import { ProprietarioComponent } from './proprietario/proprietario.component';
-import { PasseadorComponent } from './passeador/passeador.component';
+import { OpcoesCadastroComponent } from './cadastro/opcoes-cadastro.component';
+import { AgendamentoComponent } from './agendamento/agendamento.component';
+
+import { PerfilProprietarioComponent } from './proprietario/perfil-proprietario.component';
+import { CadastroProprietarioComponent } from './proprietario/cadastro-proprietario.component';
+
+import { PerfilPasseadorComponent } from './passeador/perfil-passeador.component';
+import { CadastroPasseadorComponent } from './passeador/cadastro-passeador.component';
 import { ListarPasseadorComponent } from './passeador/listar-passeador.component';
+
 import { PetComponent } from './pet/pet.component';
+
 import { routing } from './app.routes';
 
 @NgModule({
@@ -26,9 +33,12 @@ import { routing } from './app.routes';
     declarations: [ 
         AppComponent,
         HomeComponent,
-        CadastroComponent,
-        ProprietarioComponent,
-        PasseadorComponent,
+        OpcoesCadastroComponent,
+        AgendamentoComponent,
+        PerfilProprietarioComponent,
+        CadastroProprietarioComponent,
+        PerfilPasseadorComponent,
+        CadastroPasseadorComponent,
         ListarPasseadorComponent,
         PetComponent
     ],

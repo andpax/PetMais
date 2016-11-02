@@ -9,10 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require("@angular/router");
 var proprietario_model_1 = require('./proprietario.model');
 var proprietario_service_1 = require('./proprietario.service');
 var ProprietarioComponent = (function () {
-    function ProprietarioComponent(proprietarioService) {
+    function ProprietarioComponent(router, proprietarioService) {
+        this.router = router;
         this.proprietarioService = proprietarioService;
     }
     ProprietarioComponent.prototype.ngOnInit = function () {
@@ -26,7 +28,7 @@ var ProprietarioComponent = (function () {
             templateUrl: 'app/views/form-proprietario.html',
             providers: [proprietario_service_1.ProprietarioService]
         }), 
-        __metadata('design:paramtypes', [proprietario_service_1.ProprietarioService])
+        __metadata('design:paramtypes', [router_1.Router, proprietario_service_1.ProprietarioService])
     ], ProprietarioComponent);
     return ProprietarioComponent;
 }());

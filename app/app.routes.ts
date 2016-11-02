@@ -6,6 +6,7 @@ import { cadastroRoutes } from './cadastro/cadastro.routes';
 import { proprietarioRoutes } from './proprietario/proprietario.routes';
 import { passeadorRoutes } from './passeador/passeador.routes';
 import { petRoutes } from './pet/pet.routes';
+import { agendamentoRoutes } from './agendamento/agendamento.routes';
 
 export const routes: Routes = [
     {
@@ -17,7 +18,8 @@ export const routes: Routes = [
     ...cadastroRoutes,
     ...proprietarioRoutes,
     ...passeadorRoutes,
-    ...petRoutes
+    ...petRoutes,
+    ...agendamentoRoutes
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes);

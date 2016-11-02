@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 
 import { ProprietarioModel } from './proprietario.model';
 import { ProprietarioService } from './proprietario.service';
 
 @Component({
-    templateUrl: 'app/views/form-proprietario.html',
+    templateUrl: 'app/proprietario/templates/cadastro-proprietario.html',
     providers: [ ProprietarioService ]
 })
-export class ProprietarioComponent implements OnInit {
+export class CadastroProprietarioComponent implements OnInit {
 
     private  proprietario: ProprietarioModel;
 
     constructor(
+        private router: Router,
         private proprietarioService: ProprietarioService
     ){}
 
