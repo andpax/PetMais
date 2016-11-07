@@ -1,0 +1,30 @@
+<div class="simple-page-header container-fluid">
+    <div class="page-header">
+        <h1>Lista de Pets</h1>
+    </div>
+</div>
+<div class="container-fluid">
+    <div>
+        <table class="table table-striped">
+            <tr>
+                <th>Foto</th>
+                <th>Nome</th>
+                <th>Raça</th>
+                <th>Idade</th>
+                <th></th>
+            </tr>
+
+            <tr *ngFor="let pet of pets; let id=index">
+                <td><img class="img-circle" src="assets/img/img_avatar1.png" alt="pet"  style="width: 50px;"></td>
+                <td>{{ pet.nome }}</td>
+                <td>{{ pet.raca }}</td>
+                <td>{{ pet.idade }}</td>
+                <td>
+                    <a class="btn btn-info" [routerLink]="['/editar-pet/'+id]">Editar</a>
+                    <button type="button" class="btn btn-danger" (click)="excluirPet(id)">Excluir</button>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</div>

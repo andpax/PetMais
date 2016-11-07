@@ -12,14 +12,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Created by andypax on 02/11/16.
  */
 var core_1 = require('@angular/core');
+var agendamento_service_1 = require('./../agendamento/agendamento.service');
 var PerfilProprietarioComponent = (function () {
-    function PerfilProprietarioComponent() {
+    function PerfilProprietarioComponent(agendamentoService) {
+        this.agendamentoService = agendamentoService;
     }
+    PerfilProprietarioComponent.prototype.ngOnInit = function () {
+        this.agendas = this.agendamentoService.listarTodos();
+    };
+    PerfilProprietarioComponent.prototype.excluirAgenda = function (id) {
+        this.agendamentoService.excluir(id);
+        this.agendas = this.agendamentoService.listarTodos();
+    };
     PerfilProprietarioComponent = __decorate([
         core_1.Component({
-            templateUrl: 'app/proprietario/templates/perfil-proprietario.html'
+            templateUrl: 'app/proprietario/templates/perfil-proprietario.html',
+            providers: [agendamento_service_1.AgendamentoService],
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [agendamento_service_1.AgendamentoService])
     ], PerfilProprietarioComponent);
     return PerfilProprietarioComponent;
 }());

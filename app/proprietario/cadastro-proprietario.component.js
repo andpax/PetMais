@@ -22,6 +22,7 @@ var CadastroProprietarioComponent = (function () {
     };
     CadastroProprietarioComponent.prototype.cadastrar = function () {
         this.proprietarioService.cadastrar(this.proprietario);
+        this.router.navigate(['/perfil-proprietario']);
     };
     CadastroProprietarioComponent = __decorate([
         core_1.Component({

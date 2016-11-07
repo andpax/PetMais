@@ -23,5 +23,6 @@ export class CadastroProprietarioComponent implements OnInit {
 
     cadastrar() {
         this.proprietarioService.cadastrar(this.proprietario);
+        this.router.navigate(['/perfil-proprietario']);
     }
 }

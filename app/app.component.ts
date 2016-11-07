@@ -23,13 +23,13 @@ import { Component } from '@angular/core';
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="#">Serviços</a>
+                    <a routerLink="/servicos">Serviços</a>
                 </li>
                 <li>
-                    <a href="#">Sobre nós</a>
+                    <a routerLink="/sobre">Sobre nós</a>
                 </li>
                 <li>
-                    <a href="#">Contato</a>
+                    <a routerLink="/contato">Contato</a>
                 </li>
                 <li>
                     <a routerLink="/cadastro" routerLinkActive="active">Cadastre-se</a>

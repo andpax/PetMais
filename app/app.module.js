@@ -19,12 +19,16 @@ var app_component_1 = require('./app.component');
 var home_component_1 = require('./home/home.component');
 var opcoes_cadastro_component_1 = require('./cadastro/opcoes-cadastro.component');
 var agendamento_component_1 = require('./agendamento/agendamento.component');
+var editar_agendamento_component_1 = require('./agendamento/editar-agendamento.component');
 var perfil_proprietario_component_1 = require('./proprietario/perfil-proprietario.component');
 var cadastro_proprietario_component_1 = require('./proprietario/cadastro-proprietario.component');
+var editar_proprietario_component_1 = require('./proprietario/editar-proprietario.component');
 var perfil_passeador_component_1 = require('./passeador/perfil-passeador.component');
 var cadastro_passeador_component_1 = require('./passeador/cadastro-passeador.component');
 var listar_passeador_component_1 = require('./passeador/listar-passeador.component');
 var pet_component_1 = require('./pet/pet.component');
+var lista_pet_component_1 = require('./pet/lista-pet.component');
+var editar_pet_component_1 = require('./pet/editar-pet.component');
 var app_routes_1 = require('./app.routes');
 var AppModule = (function () {
     function AppModule() {
@@ -43,12 +47,16 @@ var AppModule = (function () {
                 home_component_1.HomeComponent,
                 opcoes_cadastro_component_1.OpcoesCadastroComponent,
                 agendamento_component_1.AgendamentoComponent,
+                editar_agendamento_component_1.EditarAgendamentoComponent,
                 perfil_proprietario_component_1.PerfilProprietarioComponent,
                 cadastro_proprietario_component_1.CadastroProprietarioComponent,
+                editar_proprietario_component_1.EditarProprietarioComponent,
                 perfil_passeador_component_1.PerfilPasseadorComponent,
                 cadastro_passeador_component_1.CadastroPasseadorComponent,
                 listar_passeador_component_1.ListarPasseadorComponent,
-                pet_component_1.PetComponent
+                pet_component_1.PetComponent,
+                lista_pet_component_1.ListaPetComponent,
+                editar_pet_component_1.EditarPetComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

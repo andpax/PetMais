@@ -9,19 +9,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 /**
- * Created by andypax on 02/11/16.
+ * Created by andypax on 06/11/16.
  */
 var core_1 = require('@angular/core');
-var PerfilPasseadorComponent = (function () {
-    function PerfilPasseadorComponent() {
+var pet_service_1 = require('./pet.service');
+var ListaPetComponent = (function () {
+    function ListaPetComponent(petService) {
+        this.petService = petService;
     }
-    PerfilPasseadorComponent = __decorate([
+    ListaPetComponent.prototype.ngOnInit = function () {
+        this.pets = this.petService.listarTodos();
+    };
+    ListaPetComponent.prototype.excluirPet = function (id) {
+        this.petService.excluir(id);
+        this.pets = this.petService.listarTodos();
+    };
+    ListaPetComponent = __decorate([
         core_1.Component({
-            templateUrl: "templates/pefil-passeador.html"
+            templateUrl: 'app/pet/templates/lista-pet.html',
+            providers: [pet_service_1.PetService]
         }), 
-        __metadata('design:paramtypes', [])
-    ], PerfilPasseadorComponent);
-    return PerfilPasseadorComponent;
+        __metadata('design:paramtypes', [pet_service_1.PetService])
+    ], ListaPetComponent);
+    return ListaPetComponent;
 }());
-exports.PerfilPasseadorComponent = PerfilPasseadorComponent;
-//# sourceMappingURL=passeador.component.js.map
+exports.ListaPetComponent = ListaPetComponent;
+//# sourceMappingURL=lista-pet.component.js.map

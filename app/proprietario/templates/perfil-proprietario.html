@@ -1,7 +1,7 @@
 <div class="container">
   <div class="simple-page-header container-fluid">
     <div class="page-header">
-      <h1>Bem vindo! <small>Nome Proprietario</small></h1>
+      <h1>Bem vindo! <small>Proprietário de animais</small></h1>
     </div>
   </div>
 
@@ -10,8 +10,8 @@
       <a routerLink="/cadastro-pet" class="list-group-item">Cadastre um pet</a>
       <a routerLink="/agendamento" class="list-group-item">Agende um passeio</a>
       <a routerLink="/listar-passeador" class="list-group-item">Passeadores disponíveis</a>
-      <a href="#" class="list-group-item">Alterar cadastro</a>
-      <!-- <a href="#" class="list-group-item"></a> -->
+      <a [routerLink]="['/editar-proprietario/'+id]" class="list-group-item">Alterar cadastro</a>
+      <a routerLink="/lista-pet" class="list-group-item">Lista de pets cadastrados</a>
     </div>
   </div>
 
@@ -28,127 +28,16 @@
           <th></th>
         </tr>
 
-        <tr>
-          <td>01/01/2000</td>
-          <td>Fulano de Tal</td>
-          <td>2 horas</td>
+        <tr *ngFor="let agenda of agendas; let id=index">
+          <td>{{ agenda.dataPassaeio }}</td>
+          <td>{{ agenda.nomePasseador }}</td>
+          <td>{{ agenda.tempoDuracao }}</td>
           <td>
-            <a class="btn btn-info">
-              Editar
-            </a>
-            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir" (click)="excluir(id)">Excluir</button>
+            <a class="btn btn-info" [routerLink]="['/editar-agendamento/'+id]">Editar</a>
+            <button type="button" class="btn btn-danger" (click)="excluirAgenda(id)">Excluir</button>
           </td>
         </tr>
 
-        <tr>
-          <td>01/01/2000</td>
-          <td>Fulano de Tal</td>
-          <td>2 horas</td>
-          <td>
-            <a class="btn btn-info">
-              Editar
-            </a>
-            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir" (click)="excluir(id)">Excluir</button>
-          </td>
-        </tr>
-
-        <tr>
-          <td>01/01/2000</td>
-          <td>Fulano de Tal</td>
-          <td>2 horas</td>
-          <td>
-            <a class="btn btn-info">
-              Editar
-            </a>
-            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir" (click)="excluir(id)">Excluir</button>
-          </td>
-        </tr>
-
-        <tr>
-          <td>01/01/2000</td>
-          <td>Fulano de Tal</td>
-          <td>2 horas</td>
-          <td>
-            <a class="btn btn-info">
-              Editar
-            </a>
-            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir" (click)="excluir(id)">Excluir</button>
-          </td>
-        </tr>
-
-        <tr>
-          <td>01/01/2000</td>
-          <td>Fulano de Tal</td>
-          <td>2 horas</td>
-          <td>
-            <a class="btn btn-info">
-              Editar
-            </a>
-            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir" (click)="excluir(id)">Excluir</button>
-          </td>
-        </tr>
-
-        <tr>
-          <td>01/01/2000</td>
-          <td>Fulano de Tal</td>
-          <td>2 horas</td>
-          <td>
-            <a class="btn btn-info">
-              Editar
-            </a>
-            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir" (click)="excluir(id)">Excluir</button>
-          </td>
-        </tr>
-
-        <tr>
-          <td>01/01/2000</td>
-          <td>Fulano de Tal</td>
-          <td>2 horas</td>
-          <td>
-            <a class="btn btn-info">
-              Editar
-            </a>
-            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir" (click)="excluir(id)">Excluir</button>
-          </td>
-        </tr>
-
-        <tr>
-          <td>01/01/2000</td>
-          <td>Fulano de Tal</td>
-          <td>2 horas</td>
-          <td>
-            <a class="btn btn-info">
-              Editar
-            </a>
-            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir" (click)="excluir(id)">Excluir</button>
-          </td>
-        </tr>
-
-        <tr>
-          <td>01/01/2000</td>
-          <td>Fulano de Tal</td>
-          <td>2 horas</td>
-          <td>
-            <a class="btn btn-info">
-              Editar
-            </a>
-            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir" (click)="excluir(id)">Excluir</button>
-          </td>
-        </tr>
-
-        <!-- <tr *ngFor="let aluno of alunos; let id=index">
-          <td>{{ aluno.nome }}</td>
-          <td>{{ aluno.email }}</td>
-          <td>
-            <a class="btn btn-warning" [routerLink]="['/aluno-visualizar/'+id]">
-              Visualizar
-            </a>
-            <a class="btn btn-info" [routerLink]="['/aluno-editar/'+id]">
-              Editar
-            </a>
-            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir" (click)="excluir(id)">Excluir</button>
-          </td>
-        </tr> -->
       </table>
       <!--<modal-util-->
       <!--[id]="'modalExcluir'"-->

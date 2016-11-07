@@ -9,32 +9,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 /**
- * Created by andypax on 02/11/16.
+ * Created by andypax on 06/11/16.
  */
-var core_1 = require("@angular/core");
+var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var agendamento_model_1 = require('./agendamento.model');
 var agendamento_service_1 = require('./agendamento.service');
-var AgendamentoComponent = (function () {
-    function AgendamentoComponent(router, agendamentoService) {
+var EditarAgendamentoComponent = (function () {
+    function EditarAgendamentoComponent(route, router, agendamentoService) {
+        this.route = route;
         this.router = router;
         this.agendamentoService = agendamentoService;
     }
-    AgendamentoComponent.prototype.ngOnInit = function () {
-        this.agendamento = new agendamento_model_1.AgendamentoModel();
+    EditarAgendamentoComponent.prototype.ngOnInit = function () {
+        this.id = +this.route.snapshot.params['id'];
+        this.agenda = this.agendamentoService.buscarPorId(this.id);
     };
-    AgendamentoComponent.prototype.cadastrar = function () {
-        this.agendamentoService.cadastrar(this.agendamento);
+    EditarAgendamentoComponent.prototype.atualizar = function () {
+        this.agendamentoService.atulaizar(this.id, this.agenda);
         this.router.navigate(['/perfil-proprietario']);
     };
-    AgendamentoComponent = __decorate([
+    EditarAgendamentoComponent = __decorate([
         core_1.Component({
-            templateUrl: "app/agendamento/templates/cadastro-agendamento.html",
-            providers: [agendamento_service_1.AgendamentoService],
+            templateUrl: 'app/agendamento/templates/editar-agendamento.html',
+            providers: [agendamento_service_1.AgendamentoService]
         }), 
-        __metadata('design:paramtypes', [router_1.Router, agendamento_service_1.AgendamentoService])
-    ], AgendamentoComponent);
-    return AgendamentoComponent;
+        __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, agendamento_service_1.AgendamentoService])
+    ], EditarAgendamentoComponent);
+    return EditarAgendamentoComponent;
 }());
-exports.AgendamentoComponent = AgendamentoComponent;
-//# sourceMappingURL=agendamento.component.js.map
+exports.EditarAgendamentoComponent = EditarAgendamentoComponent;
+//# sourceMappingURL=editar-agendamento.component.js.map

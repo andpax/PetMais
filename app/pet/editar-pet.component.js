@@ -9,32 +9,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 /**
- * Created by andypax on 15/10/16.
+ * Created by andypax on 07/11/16.
  */
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var pet_model_1 = require('./pet.model');
 var pet_service_1 = require('./pet.service');
-var PetComponent = (function () {
-    function PetComponent(router, petService) {
+var EditarPetComponent = (function () {
+    function EditarPetComponent(route, router, petService) {
+        this.route = route;
         this.router = router;
         this.petService = petService;
     }
-    PetComponent.prototype.ngOnInit = function () {
-        this.pet = new pet_model_1.PetModel();
+    EditarPetComponent.prototype.ngOnInit = function () {
+        this.id = +this.route.snapshot.params['id'];
+        this.pet = this.petService.buscarPorId(this.id);
     };
-    PetComponent.prototype.cadastrar = function () {
-        this.petService.cadastrar(this.pet);
+    EditarPetComponent.prototype.atualizar = function () {
+        this.petService.atualizar(this.id, this.pet);
         this.router.navigate(['/perfil-proprietario']);
     };
-    PetComponent = __decorate([
+    EditarPetComponent = __decorate([
         core_1.Component({
-            templateUrl: 'app/pet/templates/cadastro-pet.html',
+            templateUrl: 'app/pet/templates/editar-pet.html',
             providers: [pet_service_1.PetService]
         }), 
-        __metadata('design:paramtypes', [router_1.Router, pet_service_1.PetService])
-    ], PetComponent);
-    return PetComponent;
+        __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, pet_service_1.PetService])
+    ], EditarPetComponent);
+    return EditarPetComponent;
 }());
-exports.PetComponent = PetComponent;
-//# sourceMappingURL=pet.component.js.map
+exports.EditarPetComponent = EditarPetComponent;
+//# sourceMappingURL=editar-pet.component.js.map

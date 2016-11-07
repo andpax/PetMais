@@ -1,16 +1,16 @@
 <div class="container-fluid">
   <h2>Agenda de passeios</h2>
 
-    <form>
+    <form role="form">
       <div class="form-group">
         <div class="row">
           <div class="col-md-4">
             <label class="control-label">Escolha uma passeador</label>
-            <input type="text" class="form-control" name="nomePasseador" id="nomePasseador">
+            <input type="text" class="form-control" name="nomePasseador" id="nomePasseador" [(ngModel)]="agendamento.nomePasseador">
           </div>
           <div class="col-md-4">
             <label class="control-label">Escolha o seu pet</label>
-            <input type="text" class="form-control" name="nomePet" id="nomePet">
+            <input type="text" class="form-control" name="nomePet" id="nomePet" [(ngModel)]="agendamento.nomePet">
           </div>
         </div>
       </div>
@@ -19,15 +19,15 @@
         <div class="row">
           <div class="col-md-4">
             <label class="control-label">Escolha a data</label>
-            <input type="date" class="form-control" name="data" id="data">
+            <input type="text" class="form-control" name="data" id="data" placeholder="01/01/2000" [(ngModel)]="agendamento.dataPassaeio">
           </div>
           <div class="col-md-2">
             <label class="control-label">Escolha a hora do início</label>
-            <input type="text" class="form-control" name="horaInicio" id="horaInicio">
+            <input type="text" class="form-control" name="horaInicio" id="horaInicio" [(ngModel)]="agendamento.horaInicio">
           </div>
           <div class="col-md-2">
             <label class="control-label">Escolha o tempo de duração</label>
-            <input type="text" class="form-control" name="duracao" id="duracao">
+            <input type="text" class="form-control" name="duracao" id="duracao" [(ngModel)]="agendamento.tempoDuracao">
           </div>
         </div>
       </div>
@@ -35,7 +35,7 @@
       <div class="form-group">
         <div class="row">
           <div class="col-md-4">
-            <button type="" class="btn btn-primary">Agendar</button>
+            <button class="btn btn-primary" (click)="cadastrar()">Agendar</button>
             <button type="" class="btn btn-default">Cancelar</button>
           </div>
         </div>
