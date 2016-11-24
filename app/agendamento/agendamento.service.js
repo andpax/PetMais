@@ -42,6 +42,16 @@ var AgendamentoService = (function () {
         var agendamentos = this.listarTodos();
         return agendamentos[id];
     };
+    /************************************************************************8*/
+    AgendamentoService.prototype.addAgenda = function (agenda) {
+        var agendas = this.listarTodos();
+        agendas.push(agenda);
+        sessionStorage['agendas'] = JSON.stringify(agendas);
+    };
+    AgendamentoService.prototype.listarAgenda = function () {
+        var agendas = sessionStorage['agendas'];
+        return agendas ? JSON.parse(agendas) : [];
+    };
     AgendamentoService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])

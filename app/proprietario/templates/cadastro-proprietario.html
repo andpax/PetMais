@@ -1,102 +1,107 @@
+<div class="simple-page-header container-fluid">
+  <div class="page-header">
+    <h1>Propriétario de animais, faça o seu cadastro.</h1>
+  </div>
+</div>
+
 <!-- Form Proprietario -->
 <div class="container-fluid">
-  <h3>Propriétario de animais, faça o seu cadastro.</h3>
-  <hr>
-  <form>
-    <div class="form-group">
-      <div class="row">
-        <div class="col-md-4">
-          <label class="control-label">Nome</label>
-          <input type="text" class="form-control" name="nome" id="nome" [(ngModel)]="proprietario.nome">
-        </div>
-        <div class="col-md-4">
-          <label class="control-label">Sobrenome</label>
-          <input type="text" class="form-control" name="nome" id="sobrenome" [(ngModel)]="proprietario.sobreNome">
-        </div>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <div class="row">
-        <div class="col-md-4">
-          <label class="control-label">Endereço</label>
-          <input type="text" class="form-control" name="endereco" id="endereco" [(ngModel)]="proprietario.endereco">
-        </div>
-        <div class="col-md-3">
-          <label class="control-label">Complemento</label>
-          <input type="text" class="form-control" name="complemento" id="complemento" [(ngModel)]="proprietario.complemento">
-        </div>
-        <div class="col-md-1">
-          <label class="control-label">Número</label>
-          <input type="text" class="form-control" name="numero" id="numero" [(ngModel)]="proprietario.numero">
+  <div class="jumbotron" id="jtron">
+    <form>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6">
+            <label class="control-label">Nome</label>
+            <input type="text" class="form-control" name="nome" id="nome" [(ngModel)]="proprietario.nome">
+          </div>
+          <div class="col-md-6">
+            <label class="control-label">Sobrenome</label>
+            <input type="text" class="form-control" name="nome" id="sobrenome" [(ngModel)]="proprietario.sobreNome">
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="form-group">
-      <div class="row">
-        <div class="col-md-4">
-          <label class="control-label">Cidade</label>
-          <input type="text" class="form-control" name="cidade" id="cidade" [(ngModel)]="proprietario.cidade">
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6">
+            <label class="control-label">Endereço</label>
+            <input type="text" class="form-control" name="endereco" id="endereco" [(ngModel)]="proprietario.endereco">
+          </div>
+          <div class="col-md-4">
+            <label class="control-label">Complemento</label>
+            <input type="text" class="form-control" name="complemento" id="complemento" [(ngModel)]="proprietario.complemento">
+          </div>
+          <div class="col-md-2">
+            <label class="control-label">Número</label>
+            <input type="text" class="form-control" name="numero" id="numero" [(ngModel)]="proprietario.numero">
+          </div>
         </div>
-        <div class="col-md-3">
-          <label class="control-label">Cep</label>
-          <input type="text" class="form-control" name="cep" id="cep" [(ngModel)]="proprietario.cep">
-        </div>
-        <div class="col-md-1">
-          <label class="control-label">UF</label>
+      </div>
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6">
+            <label class="control-label">Cidade</label>
+            <input type="text" class="form-control" name="cidade" id="cidade" [(ngModel)]="proprietario.cidade">
+          </div>
+          <div class="col-md-4">
+            <label class="control-label">Cep</label>
+            <input type="text" class="form-control" name="cep" id="cep" [(ngModel)]="proprietario.cep">
+          </div>
+          <div class="col-md-2">
+            <label class="control-label">UF</label>
             <select class="form-control" name="uf" id="uf" [(ngModel)]="proprietario.estado">
               <option value=""></option>
               <option value="">PE</option>
               <option value="">PB</option>
             </select>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="form-group">
-      <div class="row">
-        <div class="col-md-4">
-          <label class="control-label">Email Fixo</label>
-          <input type="email" class="form-control" name="email" id="email" placeholder="email@email.com" [(ngModel)]="proprietario.email">
-        </div>
-        <div class="col-md-2">
-          <label class="control-label">Telefone Fixo</label>
-          <input type="text" class="form-control" name="telefone" id="telefone" placeholder="(00)0000-0000"[(ngModel)]="proprietario.senha">
-        </div>
-        <div class="col-md-2">
-          <label class="control-label">Celular</label>
-          <input type="text" class="form-control" name="celular" id="celular" placeholder="(00)00000-0000" [(ngModel)]="proprietario.confirmarSenha">
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-4">
+            <label class="control-label">Email Fixo</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="email@email.com" [(ngModel)]="proprietario.email">
+          </div>
+          <div class="col-md-4">
+            <label class="control-label">Telefone Fixo</label>
+            <input type="text" class="form-control" name="telefone" id="telefone" placeholder="(00)0000-0000"[(ngModel)]="proprietario.telefone">
+          </div>
+          <div class="col-md-4">
+            <label class="control-label">Celular</label>
+            <input type="text" class="form-control" name="celular" id="celular" placeholder="(00)00000-0000" [(ngModel)]="proprietario.celular">
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="form-group">
-      <div class="row">
-        <div class="col-md-4">
-          <label class="control-label">Login</label>
-          <input type="email" class="form-control" name="login" id="login" [(ngModel)]="proprietario.login">
-        </div>
-        <div class="col-md-2">
-          <label class="control-label">Senha</label>
-          <input type="password" class="form-control" name="senha" id="senha" [(ngModel)]="proprietario.senha">
-        </div>
-        <div class="col-md-2">
-          <label class="control-label">Confirme a senha</label>
-          <input type="password" class="form-control" name="confsenha" id="confsenha" [(ngModel)]="proprietario.confirmarSenha">
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6">
+            <label class="control-label">Login</label>
+            <input type="email" class="form-control" name="login" id="login" [(ngModel)]="proprietario.login">
+          </div>
+          <div class="col-md-3">
+            <label class="control-label">Senha</label>
+            <input type="password" class="form-control" name="senha" id="senha" [(ngModel)]="proprietario.senha">
+          </div>
+          <div class="col-md-3">
+            <label class="control-label">Confirme a senha</label>
+            <input type="password" class="form-control" name="confsenha" id="confsenha" [(ngModel)]="proprietario.confirmarSenha">
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="form-group">
-      <div class="row">
-        <div class="col-md-4">
-          <button type="" class="btn btn-primary" (click)="cadastrar()">Cadastrar</button>
-          <button type="" class="btn btn-default">Cancelar</button>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-12">
+            <button type="" class="btn btn-primary" (click)="cadastrar()">Cadastrar</button>
+            <button type="" class="btn btn-default">Cancelar</button>
+          </div>
         </div>
       </div>
-    </div>
-
-  </form>
+    </form>
+  </div>
 </div>
   <!-- End Form -->

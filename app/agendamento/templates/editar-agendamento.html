@@ -3,47 +3,48 @@
         <h1>Editar Agendamento</h1>
     </div>
 </div>
+
 <div class="container-fluid">
-
-    <form role="form">
-        <div class="form-group">
-            <div class="row">
-                <div class="col-md-4">
-                    <label class="control-label">Passeador</label>
-                    <input type="text" class="form-control" name="nomePasseador" id="nomePasseador" [(ngModel)]="agenda.nomePasseador">
-                </div>
-                <div class="col-md-4">
-                    <label class="control-label">Pet</label>
-                    <input type="text" class="form-control" name="nomePet" id="nomePet" [(ngModel)]="agenda.nomePet">
-                </div>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="row">
-                <div class="col-md-4">
-                    <label class="control-label">Data Passeio</label>
-                    <input type="text" class="form-control" name="data" id="data" placeholder="01/01/2000" [(ngModel)]="agenda.dataPassaeio">
-                </div>
-                <div class="col-md-2">
-                    <label class="control-label">Hora do início</label>
-                    <input type="text" class="form-control" name="horaInicio" id="horaInicio" [(ngModel)]="agenda.horaInicio">
-                </div>
-                <div class="col-md-2">
-                    <label class="control-label">Tempo de duração</label>
-                    <input type="text" class="form-control" name="duracao" id="duracao" [(ngModel)]="agenda.tempoDuracao">
+    <div class="jumbotron" id="jtron">
+        <form role="form">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="control-label">Passeador</label>
+                        <input type="text" class="form-control" name="nomePasseador" id="nomePasseador" [(ngModel)]="agenda.nomePasseador">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="control-label">Pet</label>
+                        <input type="text" class="form-control" name="nomePet" id="nomePet" [(ngModel)]="agenda.nomePet">
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            <div class="row">
-                <div class="col-md-4">
-                    <button class="btn btn-primary" (click)="atualizar()">Atualizar</button>
-                    <a class="btn btn-default" routerLink="/perfil-proprietario">Cancelar</a>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label class="control-label">Data Passeio</label>
+                        <input type="text" class="form-control" name="data" id="data" placeholder="01/01/2000" [(ngModel)]="agenda.dataPassaeio">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="control-label">Hora do início</label>
+                        <input type="text" class="form-control" name="horaInicio" id="horaInicio" [(ngModel)]="agenda.horaInicio">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="control-label">Tempo de duração</label>
+                        <input type="text" class="form-control" name="duracao" id="duracao" [(ngModel)]="agenda.tempoDuracao">
+                    </div>
                 </div>
             </div>
-        </div>
 
-    </form>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-4">
+                        <button class="btn btn-primary" (click)="atualizar()">Atualizar</button>
+                        <a class="btn btn-default" routerLink="/perfil-proprietario">Cancelar</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
 </div>

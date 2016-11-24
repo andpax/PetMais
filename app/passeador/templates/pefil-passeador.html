@@ -7,10 +7,10 @@
 
   <div class="container-fluid col-xs-4">
     <div class="list-group">
-      <a href="#" class="list-group-item">Visualizar passeios disponíveis</a>
+      <a routerLink="/passeios-disponiveis" class="list-group-item">Visualizar passeios disponíveis</a>
       <!-- <a href="#" class="list-group-item">Agende um passeio</a>
       <a href="#" class="list-group-item">Passeadores disponíveis</a> -->
-      <a href="#" class="list-group-item">Alterar cadastro</a>
+      <a  class="list-group-item">Alterar cadastro</a>
       <!-- <a href="#" class="list-group-item"></a> -->
     </div>
   </div>
@@ -29,36 +29,16 @@
           <th></th>
         </tr>
 
-        <tr>
-          <td>01/01/2000</td>
-          <td>Fulano de Tal</td>
-          <td>Tob-Pastor Alemão</td>
-          <td>2 horas</td>
+        <tr *ngFor="let agenda of listaAgenda; let id=index">
+          <td>{{ agenda.dataPassaeio }}</td>
+          <td></td>
+          <td>{{ agenda.nomePet }}</td>
+          <td>{{ agenda.tempoDuracao }}</td>
           <td>
-            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir" (click)="excluir(id)">Cancelar</button>
+            <button type="button" class="btn btn-danger" (click)="excluirAgenda(id)">Cancelar</button>
           </td>
         </tr>
-
-        <!-- <tr *ngFor="let aluno of alunos; let id=index">
-          <td>{{ aluno.nome }}</td>
-          <td>{{ aluno.email }}</td>
-          <td>
-            <a class="btn btn-warning" [routerLink]="['/aluno-visualizar/'+id]">
-              Visualizar
-            </a>
-            <a class="btn btn-info" [routerLink]="['/aluno-editar/'+id]">
-              Editar
-            </a>
-            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir" (click)="excluir(id)">Excluir</button>
-          </td>
-        </tr> -->
       </table>
-      <!--<modal-util-->
-      <!--[id]="'modalExcluir'"-->
-      <!--[titulo]="'Excluir Aluno'"-->
-      <!--[descricao]="'Deseja realmente excluir o aluno selecionado?'"-->
-      <!--(onConfirm)="onExcluir($event)">-->
-      <!--</modal-util>-->
     </div>
   </div>
 </div>

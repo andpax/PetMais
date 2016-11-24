@@ -22,7 +22,7 @@ var CadastroPasseadorComponent = (function () {
     };
     CadastroPasseadorComponent.prototype.cadastrar = function () {
         this.passeadorService.cadastrar(this.passeador);
-        this.router.navigate(['/listar-passeador']);
+        this.router.navigate(['/perfil-passeador']);
     };
     CadastroPasseadorComponent = __decorate([
         core_1.Component({

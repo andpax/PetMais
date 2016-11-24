@@ -12,14 +12,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Created by andypax on 02/11/16.
  */
 var core_1 = require('@angular/core');
+var agendamento_service_1 = require('./../agendamento/agendamento.service');
 var PerfilPasseadorComponent = (function () {
-    function PerfilPasseadorComponent() {
+    function PerfilPasseadorComponent(agendamentoService) {
+        this.agendamentoService = agendamentoService;
     }
+    PerfilPasseadorComponent.prototype.ngOnInit = function () {
+        this.listaAgenda = this.agendamentoService.listarAgenda();
+    };
     PerfilPasseadorComponent = __decorate([
         core_1.Component({
-            templateUrl: "app/passeador/templates/pefil-passeador.html"
+            templateUrl: "app/passeador/templates/pefil-passeador.html",
+            providers: [agendamento_service_1.AgendamentoService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [agendamento_service_1.AgendamentoService])
     ], PerfilPasseadorComponent);
     return PerfilPasseadorComponent;
 }());

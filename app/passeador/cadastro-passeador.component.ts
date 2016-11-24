@@ -24,6 +24,6 @@ export class CadastroPasseadorComponent implements OnInit {
 
     cadastrar() {
         this.passeadorService.cadastrar(this.passeador);
-        this.router.navigate(['/listar-passeador']);
+        this.router.navigate(['/perfil-passeador']);
     }
 }

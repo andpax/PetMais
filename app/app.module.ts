@@ -20,10 +20,14 @@ import { EditarProprietarioComponent } from './proprietario/editar-proprietario.
 import { PerfilPasseadorComponent } from './passeador/perfil-passeador.component';
 import { CadastroPasseadorComponent } from './passeador/cadastro-passeador.component';
 import { ListarPasseadorComponent } from './passeador/listar-passeador.component';
+import { ListarPasseiosDisponiveisComponent } from './passeador/listar-passeios-disponiveis.component';
 
 import { PetComponent } from './pet/pet.component';
 import { ListaPetComponent } from './pet/lista-pet.component';
 import { EditarPetComponent } from './pet/editar-pet.component';
+
+import { LoginComponent } from './autenticacao/login-component';
+import { LogoutComponent } from './autenticacao/logout-component';
 
 import { routing } from './app.routes';
 
@@ -47,9 +51,12 @@ import { routing } from './app.routes';
         PerfilPasseadorComponent,
         CadastroPasseadorComponent,
         ListarPasseadorComponent,
+        ListarPasseiosDisponiveisComponent,
         PetComponent,
         ListaPetComponent,
-        EditarPetComponent
+        EditarPetComponent,
+        LoginComponent,
+        LogoutComponent
     ],
     bootstrap: [ AppComponent ]
 })

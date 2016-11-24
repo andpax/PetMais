@@ -15,7 +15,7 @@
             </tr>
 
             <tr *ngFor="let pet of pets; let id=index">
-                <td><img class="img-circle" src="assets/img/img_avatar1.png" alt="pet"  style="width: 50px;"></td>
+                <td><img class="img-circle" src="assets/img/cães-riem.jpg" alt="pet"  style="width: 50px; height: 50px"></td>
                 <td>{{ pet.nome }}</td>
                 <td>{{ pet.raca }}</td>
                 <td>{{ pet.idade }}</td>
@@ -24,7 +24,10 @@
                     <button type="button" class="btn btn-danger" (click)="excluirPet(id)">Excluir</button>
                 </td>
             </tr>
-
         </table>
     </div>
+</div>
+<br><br>
+<div class="container-fluid">
+    <span><a routerLink="/perfil-proprietario">Voltar para perfil</a></span>
 </div>

@@ -20,12 +20,12 @@ body {
 }
 
 .image-bg-fluid-height {
-	background: url('http://www.pawsup4walks.co.uk/images/newslider1.jpg') no-repeat center center scroll;
+    background: url('../img/newslider1.jpg') no-repeat center center scroll;
     padding: 100px 0;
 }
 
 .image-bg-fixed-height {
-	background: url('http://www.pawsup4walks.co.uk/images/shonawalk1.jpg') no-repeat center center scroll;
+	background: url('../img/shonawalk1.jpg') no-repeat center center scroll;
     height: 450px;
 }
 

@@ -19,6 +19,7 @@ export class AgendamentoService {
         sessionStorage['agendamentos'] = JSON.stringify(agendamentos);
     }
 
+
     atulaizar(id: number, agendamento: AgendamentoModel) {
         var agendamentos: AgendamentoModel[] = this.listarTodos();
         agendamentos[id].nomePasseador = agendamento.nomePasseador;
@@ -38,5 +39,18 @@ export class AgendamentoService {
     buscarPorId(id: number) {
         var agendamentos: AgendamentoModel[] = this.listarTodos();
         return agendamentos[id];
+    }
+
+    /************************************************************************8*/
+
+    addAgenda(agenda: AgendamentoModel) {
+        var agendas: AgendamentoModel[] = this.listarTodos();
+        agendas.push(agenda);
+        sessionStorage['agendas'] = JSON.stringify(agendas);
+    }
+
+    listarAgenda() {
+        var agendas: string = sessionStorage['agendas'];
+        return agendas ? JSON.parse(agendas) : [];
     }
 }

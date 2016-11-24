@@ -1,0 +1,34 @@
+<div class="simple-page-header container-fluid">
+    <div class="page-header">
+        <h1>Lista de passeios disponívies</h1>
+    </div>
+</div>
+<div class="container-fluid">
+    <div>
+        <table class="table table-striped">
+            <tr>
+                <th>Nome do passeador</th>
+                <th>Foto do pet</th>
+                <th>Nome do pet</th>
+                <th>Data do passeio</th>
+                <th>Horário passeio</th>
+                <th>Duração do passeio</th>
+                <th></th>
+            </tr>
+
+            <tr *ngFor="let agenda of agdPasseio">
+                <td>{{ agenda.nomePasseador }}</td>
+                <td><img class="img-circle" src="assets/img/cães-riem.jpg" alt="pet"  style="width: 50px; height: 50px"></td>
+                <td>{{ agenda.nomePet }}</td>
+                <td>{{ agenda.dataPassaeio }}</td>
+                <td>{{ agenda.horaInicio }}</td>
+                <td>{{ agenda.tempoDuracao }}</td>
+                <td>
+                    <button type="button" class="btn btn-primary" (click)="addAgenda(agenda)">Aceitar</button>
+                    <a routerLink="/perfil-passeador" type="button" class="btn btn-danger">Recusar</a>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</div>

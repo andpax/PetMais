@@ -1,16 +1,27 @@
-<div class="container-fluid">
-  <h2>Agenda de passeios</h2>
+<div class="simple-page-header container-fluid">
+  <div class="page-header">
+    <h1>Agende um Passeio</h1>
+  </div>
+</div>
 
+<div class="container-fluid">
+  <div class="jumbotron" id="jtron">
     <form role="form">
       <div class="form-group">
         <div class="row">
-          <div class="col-md-4">
-            <label class="control-label">Escolha uma passeador</label>
-            <input type="text" class="form-control" name="nomePasseador" id="nomePasseador" [(ngModel)]="agendamento.nomePasseador">
+          <div class="col-md-6">
+            <label class="control-label">Escolha um passeador</label>
+            <select class="form-control" name="nomePasseador" id="nomePasseador" [(ngModel)]="agendamento.nomePasseador">
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </select>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
             <label class="control-label">Escolha o seu pet</label>
-            <input type="text" class="form-control" name="nomePet" id="nomePet" [(ngModel)]="agendamento.nomePet">
+            <select class="form-control" name="nomePet" id="nomePet" [(ngModel)]="agendamento.nomePet">
+              <!--<option *ngFor="let pet of agendamento" value="{{ pet.nomePet }}">{{ pet.nomePet }}</option>-->
+            </select>
           </div>
         </div>
       </div>
@@ -19,13 +30,13 @@
         <div class="row">
           <div class="col-md-4">
             <label class="control-label">Escolha a data</label>
-            <input type="text" class="form-control" name="data" id="data" placeholder="01/01/2000" [(ngModel)]="agendamento.dataPassaeio">
+            <input type="date" class="form-control" name="data" id="data" placeholder="01/01/2000" [(ngModel)]="agendamento.dataPassaeio">
           </div>
-          <div class="col-md-2">
+          <div class="col-md-4">
             <label class="control-label">Escolha a hora do início</label>
             <input type="text" class="form-control" name="horaInicio" id="horaInicio" [(ngModel)]="agendamento.horaInicio">
           </div>
-          <div class="col-md-2">
+          <div class="col-md-4">
             <label class="control-label">Escolha o tempo de duração</label>
             <input type="text" class="form-control" name="duracao" id="duracao" [(ngModel)]="agendamento.tempoDuracao">
           </div>
@@ -40,6 +51,6 @@
           </div>
         </div>
       </div>
-
     </form>
+  </div>
 </div>

@@ -34,6 +34,9 @@ import { Component } from '@angular/core';
                 <li>
                     <a routerLink="/cadastro" routerLinkActive="active">Cadastre-se</a>
                 </li>
+                <li>
+                    <a routerLink="/login" routerLinkActive="active">Login</a>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

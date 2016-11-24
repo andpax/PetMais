@@ -26,9 +26,12 @@ var editar_proprietario_component_1 = require('./proprietario/editar-proprietari
 var perfil_passeador_component_1 = require('./passeador/perfil-passeador.component');
 var cadastro_passeador_component_1 = require('./passeador/cadastro-passeador.component');
 var listar_passeador_component_1 = require('./passeador/listar-passeador.component');
+var listar_passeios_disponiveis_component_1 = require('./passeador/listar-passeios-disponiveis.component');
 var pet_component_1 = require('./pet/pet.component');
 var lista_pet_component_1 = require('./pet/lista-pet.component');
 var editar_pet_component_1 = require('./pet/editar-pet.component');
+var login_component_1 = require('./autenticacao/login-component');
+var logout_component_1 = require('./autenticacao/logout-component');
 var app_routes_1 = require('./app.routes');
 var AppModule = (function () {
     function AppModule() {
@@ -54,9 +57,12 @@ var AppModule = (function () {
                 perfil_passeador_component_1.PerfilPasseadorComponent,
                 cadastro_passeador_component_1.CadastroPasseadorComponent,
                 listar_passeador_component_1.ListarPasseadorComponent,
+                listar_passeios_disponiveis_component_1.ListarPasseiosDisponiveisComponent,
                 pet_component_1.PetComponent,
                 lista_pet_component_1.ListaPetComponent,
-                editar_pet_component_1.EditarPetComponent
+                editar_pet_component_1.EditarPetComponent,
+                login_component_1.LoginComponent,
+                logout_component_1.LogoutComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 
